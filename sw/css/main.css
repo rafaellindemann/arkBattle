@@ -1,0 +1,110 @@
+
+*{
+    margin: 8px;
+}
+
+
+body{
+    /* justify-content: center;
+    align-items: center; */
+    background-image: url('../img/wp/5.jpg');
+    background-color: black;
+    background-repeat: no-repeat;
+    /* background-clip: padding-box; */
+    background-attachment: fixed;
+    background-position: center;
+    margin-top: 100px;
+}
+
+#divPlacarEsquerda, #divPlacarDireita{
+    border-radius: 15px;
+}
+
+img{
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+#imgFoto1, #imgFoto2{
+    /* max-height: fit-content;
+    max-width: fit-content; */
+    height: 120px;
+    width: 260px;
+    margin: 8px;
+}
+
+#divFoto1, #divFoto2{
+    border: 20px;
+    border: solid;
+    border-color: darkgray;
+    /* border-color: yellowgreen; */
+    padding: 0px;
+    background-color: black;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.divAtributos, #divPlacarEsquerda, #divPlacarDireita{
+    height: 35px;
+    justify-content: center;
+    align-items: center auto;
+    text-align: center;
+    font-family: monospace;
+    font-size: 25px;
+    background-color:black;
+    color: white;
+    vertical-align: middle;
+    border: 1px;
+    border: solid;
+    border-color: darkslategray;
+}
+
+.divAtributos{
+    border-radius: 20px 2px 20px 2px;
+}
+
+.divAtributos:hover{
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 27px;
+    color: hotpink;
+}
+
+.container {
+    justify-content: center;
+    /* align-items: center; */
+    /* position: fixed; */
+    border: 3px;
+    border-style: none;
+    border-color: blanchedalmond;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 300px 30px 300px;
+    grid-template-rows: 30px 460px 30px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        ". . .";
+}
+header, div{
+    border: 1px;
+    border-style: none;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center auto;
+    text-align: center;
+    
+    /* color: aliceblue; */
+}
+header{
+    display: block;
+}
+
+
+
+/* div{
+    justify-content: center;
+    align-items: center;
+} */

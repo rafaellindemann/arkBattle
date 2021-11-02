@@ -1,0 +1,39 @@
+Bugs:
+    - nem sempre some o amarelo do empate. Acho que tem a ver com o local do clique...
+
+Falta:
+    - mostrar em algum lugar as cartas que estão na mesa por empates anteriores
+    - css (ver uma forma de os nomes compridos caberem)
+    - imagens
+
+Partida: 
+
+
+***Links
+Criaturas: https://ark.fandom.com/wiki/Creatures
+Remover de vetor: https://love2dev.com/blog/javascript-remove-from-array/
+
+
+
+
+Decidir:
+    - Velocidade
+        - Maior valor
+        - Valor do meio principal da criatura
+        - Média
+        - Criar terra, água e ar
+        - Manter só uma mas com bônus para voadores (maior) e saltadores por poderem se deslocar sem obedecer o rrelevo e obstáculos
+
+    - Redutores/bônus (211006: Acho que tem que aplicar pra refletir melhor a realidade do ark)
+        - Peso: decidir o que aplicar e como. 
+        - Vida: aplicar os bonus de resistência de dano? Acho que sim, mas como?
+        - Dano: sangramentos e afins
+        - Bônus de grupos
+
+    - Packs para balancear: 
+        - Compys e afins teriam carta de bando e não da criatura (stats agrupáveis seriam buffados xtamanhoDoBando)
+        - Neste caso, talvez usar status wild, quem sabe...
+
+    - O que fazer com o oxigênio dos aquáticos? Talvez todos com o mesmo valor (sendo o topo)
+
+        
