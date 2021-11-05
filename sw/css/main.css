@@ -1,6 +1,18 @@
 
 *{
     margin: 8px;
+    /* border: 2px solid; */
+}
+
+#divCabecalho{
+    color: goldenrod;
+    /* font-size: xx-large; */
+    /* font-weight: bold; */
+    justify-content: center;
+    align-items: center auto;
+    text-align: center;
+    font-family: monospace;
+    font-size: 28px;
 }
 
 
@@ -13,7 +25,7 @@ body{
     /* background-clip: padding-box; */
     background-attachment: fixed;
     background-position: center;
-    margin-top: 100px;
+    margin-top: 25px;
 }
 
 #divPlacarEsquerda, #divPlacarDireita{
@@ -29,19 +41,22 @@ img{
     /* max-height: fit-content;
     max-width: fit-content; */
     height: 120px;
-    width: 260px;
+    width: 250px;
     margin: 8px;
 }
 
 #divFoto1, #divFoto2{
     border: 20px;
-    border: solid;
+    /* border: solid; */
     border-color: darkgray;
     /* border-color: yellowgreen; */
     padding: 0px;
     background-color: black;
     border-radius: 10px;
     margin-top: 20px;
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .divAtributos, #divPlacarEsquerda, #divPlacarDireita{
@@ -51,12 +66,15 @@ img{
     text-align: center;
     font-family: monospace;
     font-size: 25px;
-    background-color:black;
     color: white;
     vertical-align: middle;
     border: 1px;
-    border: solid;
+    /* border: solid; */
     border-color: darkslategray;
+    /* background-color:black; */
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .divAtributos{

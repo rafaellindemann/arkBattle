@@ -3,7 +3,7 @@ var mao1 = new Array()
 var mao2 = new Array()  
 var estagiario = new Estagiario()
 var vencedor = 'Ninguém'
-var jogadorDaVez = 1//parseInt(Math.random()*2 + 1)
+var jogadorDaVez = parseInt(Math.random()*2 + 1)
 var mesa = new Array()
 var jogando = 1
     // 1: uma carta aparecendo, outra escondida (repeitando jogadorDaVez)
@@ -17,7 +17,7 @@ var resultado = 0 // mostra o resultado da última mão jogada
 var mapaDeAtributos = ['Nome', 'Vida', 'Estamina', 'Oxigenio', 'Comida', 'Peso', 'Dano', 'Velocidade', 'Cores']
 
 ///////// cores //////
-var corFundoAtt = 'black'
+var corFundoAtt = '#ffffff10'//'black'
 var corVenceu = 'green'
 var corPerdeu = 'red'
 var corEmpate = 'goldenrod'
@@ -26,8 +26,8 @@ var corEmpate = 'goldenrod'
 var debug = 1
 
 estagiario.inicializarSistema()
-
 estagiario.iniciarPartida()
+estagiario.mostrarCreditos()
 
 
 function mostrarResultado(res, nomeAtributo)
@@ -50,20 +50,16 @@ function mostrarResultado(res, nomeAtributo)
 
 function compararAtributos(at1, at2, nomeAtributo)
 {
-    // console.log(at1 + " " + at2)
     if(at1 > at2)
     {// 1 ganhou
-        // tratarVitoria1(nomeAtributo)
         resultado = 1
     }else
     {
         if(at2 > at1)
         {// 2 ganhou
-            // tratarVitoria2(nomeAtributo)
             resultado = 2
         }else
         {// empate
-            // tratarEmpate(nomeAtributo)
             resultado = 0
         }
     }
@@ -86,11 +82,9 @@ function tratarVitoria1()
     // primeiro as cartas das mãos vão pra mesa...
     mesa.push(mao1.splice(0, 1)[0])
     mesa.push(mao2.splice(0, 1)[0])
-    // depois, estas e o que mais estiver na mesa vão para a mão1
+    // depois, toda a mesa vai para a mão1
     while(mesa.length > 0)
     {
-        // mao1.push(mesa[0])
-        // mesa.splice(0, 1)
         mao1.push(mesa.splice(0, 1)[0])
     }
     mudarJogadorDaVez()
@@ -121,13 +115,7 @@ function tratarEmpate()
 
 function testar()
 {
-    // var text = 'Spinossauro'
-    // var result = text.split(' ').join('')
-    // console.log(result);
-    // wp = 'img/wp/' + wp + '.jpg'
-    // wp = `"url('img/${wp}/1.jpg')"`
-    var wp = Math.ceil(Math.random()*7)
-    document.body.style.backgroundImage = `url('img/wp/${wp}.jpg')`;
+
 }
 
 function getAtributoDaID(id)
@@ -171,9 +159,7 @@ function limparBackgroundAtributos()
     {
         document.getElementById('div'+mapaDeAtributos[i]+'1').style.backgroundColor = corFundoAtt
         document.getElementById('div'+mapaDeAtributos[i]+'2').style.backgroundColor = corFundoAtt
-        
     }
-
 }
 
 function tratarClique(e)
@@ -182,14 +168,13 @@ function tratarClique(e)
     // console.log(clique);
     if(clique.numeroAtributo != -1 && clique.nomeAtributo != 'Nome') // filtra se é clique em atributo jogável
     {
-        // console.log('Clique em atributos');
         if(vencedor == 'Ninguém')
         {
             if(jogando == 1 && jogadorDaVez == clique.player) // tá em jogo e o clique é do jogador da vez
             {
                 var at1 = mao1[0].getAtributoPorNumero(clique.numeroAtributo)
                 var at2 = mao2[0].getAtributoPorNumero(clique.numeroAtributo)
-                compararAtributos(at1, at2, clique.nomeAtributo) // ***
+                compararAtributos(at1, at2, clique.nomeAtributo) 
                 jogando = 2
             }else if(jogando == 2)
             {
@@ -207,23 +192,6 @@ function tratarClique(e)
                 jogando = 1
             }
         }
-    }
-
-    if(debug == 1)
-    {
-        // console.log(e.composedPath()[0].id)
-        // var texto = e.composedPath()[0].id
-        // console.log(texto[1])
-        // console.log(object);
-        // console.log('getAtributoDaID(e.composedPath()[0].id) :>> ', getAtributoDaID(e.composedPath()[0].id));
-
-    //     var teste = getAtributoDaID(e.composedPath()[0].id)
-    //     console.log('teste :>> ', teste);
-    //     console.log('teste.min :>> ', teste.toLowerCase());
-    //     console.log('mapa>>', mapaDeAtributos.indexOf(teste));
-    
-    // console.log(e.composedPath()[0].id);
-    // console.log(identificarClique(e.composedPath()[0].id));
     }
 
     verificarVencedor()
@@ -270,7 +238,13 @@ function atualizarTela()
     // placar/baralhos
     document.getElementById('divPlacarEsquerda').innerHTML = mao1.length
     document.getElementById('divPlacarDireita').innerHTML = mao2.length
-    // document.getElementById('divTeste').innerHTML = jogadorDaVez
+    if(mesa.length>0) 
+    {
+        document.getElementById('divCabecalho').innerHTML = mesa.length
+    }else
+    {
+        document.getElementById('divCabecalho').innerHTML = ''
+    }
 }
 
 document.onclick = tratarClique
@@ -295,8 +269,6 @@ function mostrarCarta1()
         document.getElementById('divDano1').innerHTML = `Dano: ${mao1[0].dano}`
         document.getElementById('divVelocidade1').innerHTML = `Velocidade: ${mao1[0].velocidade}`
         document.getElementById('divCores1').innerHTML = `Cores: ${mao1[0].cores}`
-
-        // console.log(mao1[0].getNome())
     }
 
     function mostrarCarta2()

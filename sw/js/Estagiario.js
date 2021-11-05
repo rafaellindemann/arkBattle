@@ -4,21 +4,20 @@ class Estagiario{
 
     }
 
+    mostrarCreditos()
+    {
+        console.log('Isto é apenas um brinquedo, fiz só pra me divertir com HTML, CSS e JS. Não leva isso muito a sério não :D');
+        console.log('Se quiser espiar o projeto por dentro vai ali no https://github.com/rafaellindemann/arkBattle');
+    }
+
     iniciarPartida()
     {
-        if(debug==1)
-        {
-            // document.getElementById('imgFoto1').setAttribute('src', )
-            console.log('jogadorDaVez: ' + jogadorDaVez)
-        } 
-        
         if(vencedor == 'Ninguém')
         {
             atualizarTela()
         }
     }
 
-    // criarMonte()
     criarBaralho()
     {
         baralho.push(new Carta('Alossauro', 630, 250, 150, 3000, 380, 35, 1579, 3));
@@ -82,8 +81,6 @@ class Estagiario{
             n = baralho.length
             alert('Número inválido!\nVamos jogar com o baralho inteiro!')
         }
-        console.log('n: ' + n)
-    
         // dividir o baralho aleatoriamente entre mao1 e mao2
         n = parseInt(n/2)
         for(var i=0; i<n; i++)
@@ -97,7 +94,7 @@ class Estagiario{
 
     inicializarSistema()
     {
-        var wp = Math.ceil(Math.random()*7)
+        var wp = Math.ceil(Math.random()*22)
         document.body.style.backgroundImage = `url('img/wp/${wp}.jpg')`;
         this.criarBaralho()
         this.criarMaos()
