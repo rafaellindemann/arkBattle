@@ -36,4 +36,9 @@ Decidir:
 
     - O que fazer com o oxigênio dos aquáticos? Talvez todos com o mesmo valor (sendo o topo)
 
+
+Futuro:
+	- PvE Fácil - bot apenas sorteia uma jogada;
+	- PvE Difícil - bot cria estatísticas de ordenação para cada atributo e escolhe o melhor rankeado que tiver na carta.
+
         

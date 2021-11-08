@@ -94,7 +94,7 @@ class Estagiario{
 
     inicializarSistema()
     {
-        var wp = Math.ceil(Math.random()*22)
+        var wp = Math.ceil(Math.random()*11)
         document.body.style.backgroundImage = `url('img/wp/${wp}.jpg')`;
         this.criarBaralho()
         this.criarMaos()

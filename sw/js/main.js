@@ -261,14 +261,14 @@ function mostrarCarta1()
         var nome = criarNomeDoArquivo(mao1[0].nome)
         document.getElementById('imgFoto1').setAttribute('src', nome)
         document.getElementById('divNome1').innerHTML = `${mao1[0].nome}`
-        document.getElementById('divVida1').innerHTML = `Vida: ${mao1[0].vida}`
-        document.getElementById('divEstamina1').innerHTML = `Estamina: ${mao1[0].estamina}`
-        document.getElementById('divOxigenio1').innerHTML = `Oxigênio: ${mao1[0].oxigenio}`
-        document.getElementById('divComida1').innerHTML = `Comida: ${mao1[0].comida}`
-        document.getElementById('divPeso1').innerHTML = `Peso: ${mao1[0].peso}`
-        document.getElementById('divDano1').innerHTML = `Dano: ${mao1[0].dano}`
-        document.getElementById('divVelocidade1').innerHTML = `Velocidade: ${mao1[0].velocidade}`
-        document.getElementById('divCores1').innerHTML = `Cores: ${mao1[0].cores}`
+        document.getElementById('divVida1').innerHTML = `Vida:<BR>${mao1[0].vida}`
+        document.getElementById('divEstamina1').innerHTML = `Estamina:<BR>${mao1[0].estamina}`
+        document.getElementById('divOxigenio1').innerHTML = `Oxigênio:<BR>${mao1[0].oxigenio}`
+        document.getElementById('divComida1').innerHTML = `Comida:<BR>${mao1[0].comida}`
+        document.getElementById('divPeso1').innerHTML = `Peso:<BR>${mao1[0].peso}`
+        document.getElementById('divDano1').innerHTML = `Dano:<BR>${mao1[0].dano}`
+        document.getElementById('divVelocidade1').innerHTML = `Velocidade:<BR>${mao1[0].velocidade}`
+        document.getElementById('divCores1').innerHTML = `Cores:<BR>${mao1[0].cores}`
     }
 
     function mostrarCarta2()
@@ -276,14 +276,14 @@ function mostrarCarta1()
         var nome = criarNomeDoArquivo(mao2[0].nome)
         document.getElementById('imgFoto2').setAttribute('src', nome)
         document.getElementById('divNome2').innerHTML = `${mao2[0].nome}`
-        document.getElementById('divVida2').innerHTML = `Vida: ${mao2[0].vida}`
-        document.getElementById('divEstamina2').innerHTML = `Estamina: ${mao2[0].estamina}`
-        document.getElementById('divOxigenio2').innerHTML = `Oxigênio: ${mao2[0].oxigenio}`
-        document.getElementById('divComida2').innerHTML = `Comida: ${mao2[0].comida}`
-        document.getElementById('divPeso2').innerHTML = `Peso: ${mao2[0].peso}`
-        document.getElementById('divDano2').innerHTML = `Dano: ${mao2[0].dano}`
-        document.getElementById('divVelocidade2').innerHTML = `Velocidade: ${mao2[0].velocidade}`
-        document.getElementById('divCores2').innerHTML = `Cores: ${mao2[0].cores}`
+        document.getElementById('divVida2').innerHTML = `Vida:<BR>${mao2[0].vida}`
+        document.getElementById('divEstamina2').innerHTML = `Estamina:<BR>${mao2[0].estamina}`
+        document.getElementById('divOxigenio2').innerHTML = `Oxigênio:<BR>${mao2[0].oxigenio}`
+        document.getElementById('divComida2').innerHTML = `Comida:<BR>${mao2[0].comida}`
+        document.getElementById('divPeso2').innerHTML = `Peso:<BR>${mao2[0].peso}`
+        document.getElementById('divDano2').innerHTML = `Dano:<BR>${mao2[0].dano}`
+        document.getElementById('divVelocidade2').innerHTML = `Velocidade:<BR>${mao2[0].velocidade}`
+        document.getElementById('divCores2').innerHTML = `Cores:<BR>${mao2[0].cores}`
     }
 
     function esconderCarta1()
